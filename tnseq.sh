@@ -75,3 +75,4 @@ transit convert gff_to_prot_table /rds/general/user/sam321/home/reference/MG1655
 
 transit resampling KT.chemo.1.wig,KT.chemo.2.wig,KT.chemo.3.wig KT.chemo.I1.wig,KT.chemo.I2.wig,KT.chemo.I3.wig $ProtKT2440 KT_chemo_InducedvsKT_chemo_NoInduced.resampling.txt -a
 transit resampling MG.chemo.1.wig,MG.chemo.2.wig,MG.chemo.3.wig MG.chemo.I1.wig,MG.chemo.I2.wig,MG.chemo.I3.wig $ProtMG1655 MG_chemo_InducedvsMG_chemo_NoInduced.resampling.txt -a
+#
