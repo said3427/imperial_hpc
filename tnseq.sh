@@ -165,6 +165,15 @@ cut -f3,4 bedgraph/citrate.2.bedgraph > wig/citrate.2.wig
 java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/citrate.3.bam  > bedgraph/citrate.3.bedgraph
 cut -f3,4 bedgraph/citrate.3.bedgraph > wig/citrate.3.wig
 
+java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P1.bam  > bedgraph/parahydroxybenzoate.P1.bedgraph
+cut -f3,4 bedgraph/parahydroxybenzoate.P1.bed1raph > wig/parahydroxybenzoate.P1.wig
+
+java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P2.bam  > bedgraph/parahydroxybenzoate.P2.bedgraph
+cut -f3,4 bedgraph/parahydroxybenzoate.P2.bedgraph > wig/parahydroxybenzoate.P2.wig
+
+java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P3.bam  > bedgraph/parahydroxybenzoate.P3.bedgraph
+cut -f3,4 bedgraph/parahydroxybenzoate.P3.bedgraph > wig/parahydroxybenzoate.P3.wig
+
 java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.1.bam  > bedgraph/parahydroxybenzoate.1.bedgraph
 cut -f3,4 bedgraph/parahydroxybenzoate.1.bedgraph > wig/parahydroxybenzoate.1.wig
 
@@ -173,15 +182,6 @@ cut -f3,4 bedgraph/parahydroxybenzoate.2.bedgraph > wig/parahydroxybenzoate.2.wi
 
 java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.3.bam  > bedgraph/parahydroxybenzoate.3.bedgraph
 cut -f3,4 bedgraph/parahydroxybenzoate.3.bedgraph > wig/parahydroxybenzoate.3.wig
-
-java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P1.bam  > bedgraph/parahydroxybenzoate.P1.bedgraph
-cut -f3,4 bedgraph/parahydroxybenzoate.P1.bedgraph > wig/parahydroxybenzoate.P1.wig
-
-java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P2.bam  > bedgraph/parahydroxybenzoate.P2.bedgraph
-cut -f3,4 bedgraph/parahydroxybenzoate.P2.bedgraph > wig/parahydroxybenzoate.P2.wig
-
-java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.P3.bam  > bedgraph/parahydroxybenzoate.P3.bedgraph
-cut -f3,4 bedgraph/parahydroxybenzoate.P3.bedgraph > wig/parahydroxybenzoate.P3.wig
 
 cd wig
 
