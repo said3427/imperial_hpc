@@ -145,4 +145,3 @@ transit resampling MG.H.1.wig,MG.H.2.wig,MG.H.3.wig MG.H.I1.wig,MG.H.I2.wig,MG.H
 transit resampling KT.L.1.wig,KT.L.2.wig,KT.L.3.wig KT.L.I1.wig,KT.L.I2.wig,KT.L.I3.wig $ProtKT2440 KT_L_InducedvsKT_L_NoInduced.resampling.txt -a
 transit resampling MG.L.1.wig,MG.L.2.wig,MG.L.3.wig MG.L.I1.wig,MG.L.I2.wig,MG.L.I3.wig $ProtMG1655 MG_L_InducedvsMG_L_NoInduced.resampling.txt -a
 
-#
