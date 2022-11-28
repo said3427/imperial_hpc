@@ -201,6 +201,24 @@ ProtMG1655="/rds/general/user/sam321/home/reference/MG1655/sequence.prot_table"
 #java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/parahydroxybenzoate.3.bam  > bedgraph/parahydroxybenzoate.3.bedgraph
 #cut -f3,4 bedgraph/parahydroxybenzoate.3.bedgraph > wig/parahydroxybenzoate.3.wig
 
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.1.bam  > bedgraph/MG.L.1.bedgraph
+#cut -f3,4 bedgraph/MG.L.1.bedgraph > wig/MG.L.1.wig
+
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.2.bam  > bedgraph/MG.L.2.bedgraph
+#cut -f3,4 bedgraph/MG.L.2.bedgraph > wig/MG.L.2.wig
+
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.3.bam  > bedgraph/MG.L.3.bedgraph
+#cut -f3,4 bedgraph/MG.L.3.bedgraph > wig/MG.L.3.wig
+
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.I1.bam  > bedgraph/MG.L.I1.bedgraph
+#cut -f3,4 bedgraph/MG.L.I1.bedgraph > wig/MG.L.I1.wig
+
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.I2.bam  > bedgraph/MG.L.I2.bedgraph
+#cut -f3,4 bedgraph/MG.L.I2.bedgraph > wig/MG.L.I2.wig
+
+#java -jar /rds/general/user/sam321/home/tools/jvarkit/dist/bam2wig.jar -bg -s 10 -w 10  bam/MG.L.I3.bam  > bedgraph/MG.L.I3.bedgraph
+#cut -f3,4 bedgraph/MG.L.I3.bedgraph > wig/MG.L.I3.wig
+
 cd wig
 
 #transit convert gff_to_prot_table /rds/general/user/sam321/home/reference/MG1655/sequence.gff3 /rds/general/user/sam321/home/reference/MG1655/sequence.prot_table
@@ -210,8 +228,25 @@ cd wig
 #transit resampling KT.H.1.wig,KT.H.2.wig,KT.H.3.wig KT.H.I1.wig,KT.H.I2.wig,KT.H.I3.wig $ProtKT2440 KT_H_InducedvsKT_H_NoInduced.resampling.txt -a
 #transit resampling MG.H.1.wig,MG.H.2.wig,MG.H.3.wig MG.H.I1.wig,MG.H.I2.wig,MG.H.I3.wig $ProtMG1655 MG_H_InducedvsMG_H_NoInduced.resampling.txt -a
 #transit resampling KT.L.1.wig,KT.L.2.wig,KT.L.3.wig KT.L.I1.wig,KT.L.I2.wig,KT.L.I3.wig $ProtKT2440 KT_L_InducedvsKT_L_NoInduced.resampling.txt -a
-transit resampling MG.L.1.wig,MG.L.2.wig,MG.L.3.wig MG.L.I1.wig,MG.L.I2.wig,MG.L.I3.wig $ProtMG1655 MG_L_InducedvsMG_L_NoInduced.resampling.txt -a
+#transit resampling MG.L.1.wig,MG.L.2.wig,MG.L.3.wig MG.L.I1.wig,MG.L.I2.wig,MG.L.I3.wig $ProtMG1655 MG_L_InducedvsMG_L_NoInduced.resampling.txt -a
 
 #transit resampling citrate.1.wig,citrate.2.wig,citrate.3.wig glucose.1.wig,glucose.2.wig,glucose.3.wig $ProtKT2440 citratevsGlucose.resampling.txt -a
 #transit resampling parahydroxybenzoate.1.wig,parahydroxybenzoate.2.wig,parahydroxybenzoate.3.wig glucose.1.wig,glucose.2.wig,glucose.3.wig $ProtKT2440 parahydroxybenzoatevsGlucose.resampling.txt -a
-transit resampling parahydroxybenzoate.1.wig,parahydroxybenzoate.2.wig,parahydroxybenzoate.3.wig parahydroxybenzoate.P1.wig,parahydroxybenzoate.P2.wig,parahydroxybenzoate.P3.wig $ProtKT2440 parahydroxybenzoatevsParahydroxybenzoateP.resampling.txt -a
+#transit resampling parahydroxybenzoate.1.wig,parahydroxybenzoate.2.wig,parahydroxybenzoate.3.wig parahydroxybenzoate.P1.wig,parahydroxybenzoate.P2.wig,parahydroxybenzoate.P3.wig $ProtKT2440 parahydroxybenzoatevsParahydroxybenzoateP.resampling.txt -a
+
+transit tn5gaps KT.chemo.1.wig,KT.chemo.2.wig,KT.chemo.3.wig $ProtKT2440 KT.chemo.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.chemo.1.wig,MG.chemo.2.wig,MG.chemo.3.wig $ProtMG1655 MG.chemo.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps KT.H.1.wig,KT.H.2.wig,KT.H.3.wig $ProtKT2440 KT.H.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.H.1.wig,MG.H.2.wig,MG.H.3.wig $ProtMG1655 MG.H.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps KT.L.1.wig,KT.L.2.wig,KT.L.3.wig $ProtKT2440 KT.L.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.L.1.wig,MG.L.2.wig,MG.L.3.wig $ProtMG1655 MG.L.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps citrate.1.wig,citrate.2.wig,citrate.3.wig $ProtKT2440 citrate.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps KT.chemo.I1.wig,KT.chemo.I2.wig,KT.chemo.I3.wig $ProtKT2440 KT.chemo.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.chemo.I1.wig,MG.chemo.I2.wig,MG.chemo.I3.wig $ProtMG1655 MG.chemo.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps KT.H.I1.wig,KT.H.I2.wig,KT.H.I3.wig $ProtKT2440 KT.H.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.H.I1.wig,MG.H.I2.wig,MG.H.I3.wig $ProtMG1655 MG.H.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps KT.L.I1.wig,KT.L.I2.wig,KT.L.I3.wig $ProtKT2440 KT.L.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps MG.L.I1.wig,MG.L.I2.wig,MG.L.I3.wig $ProtMG1655 MG.L.I.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps parahydroxybenzoate.1.wig,parahydroxybenzoate.2.wig,parahydroxybenzoate.3.wig $ProtKT2440 parahydroxybenzoate.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps parahydroxybenzoate.P1.wig,parahydroxybenzoate.P2.wig,parahydroxybenzoate.P3.wig $ProtKT2440 parahydroxybenzoate.P.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
+transit tn5gaps glucose.1.wig,glucose.2.wig,glucose.3.wig $ProtKT2440 glucose.tn5gaps.txt -m 10 -r Mean -iN 5 -iC 5
